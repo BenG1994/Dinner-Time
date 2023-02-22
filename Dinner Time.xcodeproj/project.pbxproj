@@ -7,25 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E53D97129A5A91C0090B7D5 /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53D97029A5A91C0090B7D5 /* AddMealViewController.swift */; };
 		2E7B597F29A5636B00F2A30C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B597E29A5636B00F2A30C /* AppDelegate.swift */; };
 		2E7B598129A5636B00F2A30C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B598029A5636B00F2A30C /* SceneDelegate.swift */; };
-		2E7B598329A5636B00F2A30C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B598229A5636B00F2A30C /* ViewController.swift */; };
 		2E7B598629A5636B00F2A30C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7B598429A5636B00F2A30C /* Main.storyboard */; };
 		2E7B598929A5636B00F2A30C /* Dinner_Time.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B598729A5636B00F2A30C /* Dinner_Time.xcdatamodeld */; };
 		2E7B598B29A5636C00F2A30C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E7B598A29A5636C00F2A30C /* Assets.xcassets */; };
 		2E7B598E29A5636C00F2A30C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7B598C29A5636C00F2A30C /* LaunchScreen.storyboard */; };
+		2E7B599D29A566B600F2A30C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B599B29A566B600F2A30C /* SWRevealViewController.m */; };
+		2E7B599F29A5679700F2A30C /* FamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B599E29A5679700F2A30C /* FamilyMemberViewController.swift */; };
+		2E7B59A129A567A100F2A30C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B59A029A567A100F2A30C /* CollectionViewController.swift */; };
+		2E7B59A329A56DA000F2A30C /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B59A229A56DA000F2A30C /* MealViewController.swift */; };
+		2EE1667F29A6AA4400219FFD /* AddMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE1667E29A6AA4400219FFD /* AddMealCell.swift */; };
+		2EE1668129A6AB9700219FFD /* CurrentMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE1668029A6AB9700219FFD /* CurrentMealCell.swift */; };
+		2EE1668329A6ABBB00219FFD /* FamilyMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE1668229A6ABBB00219FFD /* FamilyMemberCell.swift */; };
+		2EE1668529A6ABDE00219FFD /* MealsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE1668429A6ABDE00219FFD /* MealsCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E53D97029A5A91C0090B7D5 /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
 		2E7B597B29A5636B00F2A30C /* Dinner Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dinner Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E7B597E29A5636B00F2A30C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E7B598029A5636B00F2A30C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E7B598229A5636B00F2A30C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2E7B598529A5636B00F2A30C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E7B598829A5636B00F2A30C /* Dinner_Time.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dinner_Time.xcdatamodel; sourceTree = "<group>"; };
 		2E7B598A29A5636C00F2A30C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E7B598D29A5636C00F2A30C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E7B598F29A5636C00F2A30C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E7B599929A566B600F2A30C /* Dinner Time-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dinner Time-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E7B599B29A566B600F2A30C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		2E7B599C29A566B600F2A30C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2E7B599E29A5679700F2A30C /* FamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberViewController.swift; sourceTree = "<group>"; };
+		2E7B59A029A567A100F2A30C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		2E7B59A229A56DA000F2A30C /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		2EE1667E29A6AA4400219FFD /* AddMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealCell.swift; sourceTree = "<group>"; };
+		2EE1668029A6AB9700219FFD /* CurrentMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMealCell.swift; sourceTree = "<group>"; };
+		2EE1668229A6ABBB00219FFD /* FamilyMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCell.swift; sourceTree = "<group>"; };
+		2EE1668429A6ABDE00219FFD /* MealsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +76,12 @@
 		2E7B597D29A5636B00F2A30C /* Dinner Time */ = {
 			isa = PBXGroup;
 			children = (
+				2E7B599829A5664500F2A30C /* Models */,
+				2E7B599729A5664100F2A30C /* Controllers */,
+				2E7B599629A5663F00F2A30C /* Views */,
+				2E7B599529A5663800F2A30C /* Supporting Files */,
 				2E7B597E29A5636B00F2A30C /* AppDelegate.swift */,
 				2E7B598029A5636B00F2A30C /* SceneDelegate.swift */,
-				2E7B598229A5636B00F2A30C /* ViewController.swift */,
 				2E7B598429A5636B00F2A30C /* Main.storyboard */,
 				2E7B598A29A5636C00F2A30C /* Assets.xcassets */,
 				2E7B598C29A5636C00F2A30C /* LaunchScreen.storyboard */,
@@ -68,6 +89,45 @@
 				2E7B598729A5636B00F2A30C /* Dinner_Time.xcdatamodeld */,
 			);
 			path = "Dinner Time";
+			sourceTree = "<group>";
+		};
+		2E7B599529A5663800F2A30C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E7B599C29A566B600F2A30C /* SWRevealViewController.h */,
+				2E7B599B29A566B600F2A30C /* SWRevealViewController.m */,
+				2E7B599929A566B600F2A30C /* Dinner Time-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E7B599629A5663F00F2A30C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E7B599729A5664100F2A30C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E7B599E29A5679700F2A30C /* FamilyMemberViewController.swift */,
+				2E7B59A029A567A100F2A30C /* CollectionViewController.swift */,
+				2E7B59A229A56DA000F2A30C /* MealViewController.swift */,
+				2E53D97029A5A91C0090B7D5 /* AddMealViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2E7B599829A5664500F2A30C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2EE1667E29A6AA4400219FFD /* AddMealCell.swift */,
+				2EE1668029A6AB9700219FFD /* CurrentMealCell.swift */,
+				2EE1668229A6ABBB00219FFD /* FamilyMemberCell.swift */,
+				2EE1668429A6ABDE00219FFD /* MealsCollectionCell.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +162,7 @@
 				TargetAttributes = {
 					2E7B597A29A5636B00F2A30C = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -141,9 +202,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7B598329A5636B00F2A30C /* ViewController.swift in Sources */,
+				2E7B59A329A56DA000F2A30C /* MealViewController.swift in Sources */,
 				2E7B597F29A5636B00F2A30C /* AppDelegate.swift in Sources */,
+				2EE1668529A6ABDE00219FFD /* MealsCollectionCell.swift in Sources */,
+				2EE1667F29A6AA4400219FFD /* AddMealCell.swift in Sources */,
+				2E53D97129A5A91C0090B7D5 /* AddMealViewController.swift in Sources */,
+				2EE1668129A6AB9700219FFD /* CurrentMealCell.swift in Sources */,
+				2E7B599D29A566B600F2A30C /* SWRevealViewController.m in Sources */,
+				2EE1668329A6ABBB00219FFD /* FamilyMemberCell.swift in Sources */,
 				2E7B598929A5636B00F2A30C /* Dinner_Time.xcdatamodeld in Sources */,
+				2E7B59A129A567A100F2A30C /* CollectionViewController.swift in Sources */,
+				2E7B599F29A5679700F2A30C /* FamilyMemberViewController.swift in Sources */,
 				2E7B598129A5636B00F2A30C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4224Q87F2F;
@@ -297,8 +367,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +376,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bengauger.Dinner-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Dinner Time/Supporting Files/Dinner Time-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4224Q87F2F;
@@ -325,8 +397,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bengauger.Dinner-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Dinner Time/Supporting Files/Dinner Time-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
