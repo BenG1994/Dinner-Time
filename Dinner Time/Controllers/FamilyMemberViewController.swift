@@ -9,9 +9,12 @@ import UIKit
 import CoreData
 
 
-class FamilyMemberViewController: UITableViewController {
+class FamilyMemberViewController: UIViewController {
     
     @IBOutlet weak var familyMemberLabelText: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     var familyMembers: [FamilyMembers] = []
     var name: String!
@@ -19,17 +22,19 @@ class FamilyMemberViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 86
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
         
         
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//            super.viewWillAppear(animated)
-//    fetchCoreDataNames()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+    fetchCoreData()
+        tableView.reloadData()
+    }
     
     
     @IBAction func addFamilyMemberPressed(_ sender: Any) {
@@ -47,7 +52,7 @@ class FamilyMemberViewController: UITableViewController {
                 }
             }
             self.fetchCoreData()
-//            print(self.name)
+//            print(self.familyMembers)
             
         }
         
@@ -90,6 +95,7 @@ class FamilyMemberViewController: UITableViewController {
             if complete {
                 print("view will appear called")
                 print("\(familyMembers.count) name fetched")
+                tableView.reloadData()
                 
             }
         }
@@ -113,18 +119,18 @@ class FamilyMemberViewController: UITableViewController {
     }
 }
 
-extension FamilyMemberViewController {
+extension FamilyMemberViewController: UITableViewDelegate, UITableViewDataSource {
     
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return familyMembers.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "familyMemberCell") as? FamilyMemberCell else {return UITableViewCell()}
         
         

@@ -3,6 +3,7 @@
     <entity name="FamilyMembers" representedClassName="FamilyMembers" syncable="YES" codeGenerationType="class">
         <attribute name="dislike" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="like" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mealImage" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
 </model>
