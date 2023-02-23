@@ -18,6 +18,9 @@
 		2E7B599F29A5679700F2A30C /* FamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B599E29A5679700F2A30C /* FamilyMemberViewController.swift */; };
 		2E7B59A129A567A100F2A30C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B59A029A567A100F2A30C /* CollectionViewController.swift */; };
 		2E7B59A329A56DA000F2A30C /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B59A229A56DA000F2A30C /* MealViewController.swift */; };
+		2E9ED4AA29A7FFAE00F8F054 /* SaveLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9ED4A929A7FFAE00F8F054 /* SaveLoadData.swift */; };
+		2E9ED4AD29A811C700F8F054 /* AddNewMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9ED4AB29A811C700F8F054 /* AddNewMealCell.swift */; };
+		2E9ED4AE29A811C700F8F054 /* AddNewMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9ED4AC29A811C700F8F054 /* AddNewMealCell.xib */; };
 		2EE1667F29A6AA4400219FFD /* AddMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE1667E29A6AA4400219FFD /* AddMealCell.swift */; };
 		2EE1668129A6AB9700219FFD /* CurrentMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE1668029A6AB9700219FFD /* CurrentMealCell.swift */; };
 		2EE1668329A6ABBB00219FFD /* FamilyMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE1668229A6ABBB00219FFD /* FamilyMemberCell.swift */; };
@@ -40,6 +43,9 @@
 		2E7B599E29A5679700F2A30C /* FamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberViewController.swift; sourceTree = "<group>"; };
 		2E7B59A029A567A100F2A30C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		2E7B59A229A56DA000F2A30C /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		2E9ED4A929A7FFAE00F8F054 /* SaveLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadData.swift; sourceTree = "<group>"; };
+		2E9ED4AB29A811C700F8F054 /* AddNewMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMealCell.swift; sourceTree = "<group>"; };
+		2E9ED4AC29A811C700F8F054 /* AddNewMealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewMealCell.xib; sourceTree = "<group>"; };
 		2EE1667E29A6AA4400219FFD /* AddMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealCell.swift; sourceTree = "<group>"; };
 		2EE1668029A6AB9700219FFD /* CurrentMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMealCell.swift; sourceTree = "<group>"; };
 		2EE1668229A6ABBB00219FFD /* FamilyMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCell.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 		2E7B597D29A5636B00F2A30C /* Dinner Time */ = {
 			isa = PBXGroup;
 			children = (
+				2E9ED4A829A7FFA200F8F054 /* Utilities */,
 				2E7B599829A5664500F2A30C /* Models */,
 				2E7B599729A5664100F2A30C /* Controllers */,
 				2E7B599629A5663F00F2A30C /* Views */,
@@ -126,8 +133,18 @@
 				2EE1668029A6AB9700219FFD /* CurrentMealCell.swift */,
 				2EE1668229A6ABBB00219FFD /* FamilyMemberCell.swift */,
 				2EE1668429A6ABDE00219FFD /* MealsCollectionCell.swift */,
+				2E9ED4AB29A811C700F8F054 /* AddNewMealCell.swift */,
+				2E9ED4AC29A811C700F8F054 /* AddNewMealCell.xib */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2E9ED4A829A7FFA200F8F054 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2E9ED4A929A7FFAE00F8F054 /* SaveLoadData.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E7B598E29A5636C00F2A30C /* LaunchScreen.storyboard in Resources */,
+				2E9ED4AE29A811C700F8F054 /* AddNewMealCell.xib in Resources */,
 				2E7B598B29A5636C00F2A30C /* Assets.xcassets in Resources */,
 				2E7B598629A5636B00F2A30C /* Main.storyboard in Resources */,
 			);
@@ -212,8 +230,10 @@
 				2EE1668329A6ABBB00219FFD /* FamilyMemberCell.swift in Sources */,
 				2E7B598929A5636B00F2A30C /* Dinner_Time.xcdatamodeld in Sources */,
 				2E7B59A129A567A100F2A30C /* CollectionViewController.swift in Sources */,
+				2E9ED4AA29A7FFAE00F8F054 /* SaveLoadData.swift in Sources */,
 				2E7B599F29A5679700F2A30C /* FamilyMemberViewController.swift in Sources */,
 				2E7B598129A5636B00F2A30C /* SceneDelegate.swift in Sources */,
+				2E9ED4AD29A811C700F8F054 /* AddNewMealCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

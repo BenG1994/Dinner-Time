@@ -13,20 +13,25 @@ class FamilyMemberViewController: UIViewController {
     
     @IBOutlet weak var familyMemberLabelText: UILabel!
     
+    @IBOutlet weak var totalMembersButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
     
     var familyMembers: [FamilyMembers] = []
     var name: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 86
+        self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 85
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         
-        
+        if familyMembers.count == 0 {
+            totalMembersButton.setTitle("No Members", for: .normal)
+        }else {
+            totalMembersButton.setTitle("All Members", for: .normal)
+        }
         
     }
     
@@ -34,8 +39,17 @@ class FamilyMemberViewController: UIViewController {
             super.viewWillAppear(animated)
     fetchCoreData()
         tableView.reloadData()
+        
+        if familyMembers.count == 0 {
+            totalMembersButton.setTitle("No Members", for: .normal)
+        }else {
+            totalMembersButton.setTitle("All Members", for: .normal)
+        }
     }
     
+    @IBAction func totalMembersPressed(_ sender: Any) {
+        //Display collection view for everyone, default mode
+    }
     
     @IBAction func addFamilyMemberPressed(_ sender: Any) {
         var textField = UITextField()
@@ -53,6 +67,12 @@ class FamilyMemberViewController: UIViewController {
             }
             self.fetchCoreData()
 //            print(self.familyMembers)
+            
+            if self.familyMembers.count == 0 {
+                self.totalMembersButton.setTitle("No Members", for: .normal)
+            }else {
+                self.totalMembersButton.setTitle("All Members", for: .normal)
+            }
             
         }
         
