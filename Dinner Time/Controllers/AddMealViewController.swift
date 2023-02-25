@@ -11,12 +11,15 @@ import CoreData
 class AddMealViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealDisplayTextField: UITextField!
     @IBOutlet weak var addPhotoStack: UIStackView!
     
-//    var familyMembers = [FamilyMembers].self
+//        var familyMembers = [FamilyMembers].self
+    var like: Bool = true
+    var dislike: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,26 +28,26 @@ class AddMealViewController: UIViewController, UIImagePickerControllerDelegate, 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-registerTablecells()
-  
+        registerTableCells()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         fetchCoreData()
         tableView.reloadData()
-        print(familyMembers.count)
+  
         
     }
     
-    func registerTablecells() {
+    func registerTableCells() {
         tableView.register(UINib(nibName: "AddNewMealCell", bundle: nil), forCellReuseIdentifier: "AddNewMealCell")
     }
     
     
     
     
-//MARK: - Camera stuff
+    
+    //MARK: - Camera stuff
     
     func accessCameraAndPhotos() {
         let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
@@ -91,32 +94,6 @@ registerTablecells()
         accessCameraAndPhotos()
     }
     
-    //MARK: - Meal Likes/Dislikes
-//    
-//    @IBAction func likePressed(_ sender: Any) {
-//        let likeButtonImage = UIImage(named: "checkmark")
-//        self.dislikebutton.setImage(nil, for: .normal)
-//        self.likeButton.setImage(likeButtonImage, for: .normal)
-//    }
-//    
-//    
-//    @IBAction func dislikePressed(_ sender: Any) {
-//        let dislikeButtonImage = UIImage(named: "xmark")
-//        self.dislikebutton.setImage(dislikeButtonImage, for: .normal)
-//        self.likeButton.setImage(nil, for: .normal)
-//    }
-    
-    
-//    @IBAction func likePressed(_ sender: Any) {
-//        let likeButtonImage = UIImage(named: "checkmark")
-//        self.dislikeButton.setImage(nil, for: .normal)
-//        self.likeButton.setImage(likeButtonImage, for: .normal)
-//    }
-//
-//
-//    @IBAction func dislikePressed(_ sender: Any) {
-//    }
-    
     
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -125,6 +102,23 @@ registerTablecells()
     
     @IBAction func addMealPressed(_ sender: Any) {
         dismiss(animated: true)
+    }
+    
+    func save(completion: (_ finished: Bool) -> ()) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
+        let member = FamilyMembers(context: managedContext)
+        
+        member.like = like
+        member.dislike = dislike
+        do{
+            try managedContext.save()
+            print("successfully saved data")
+//            print("\(self.like) name")
+            completion(true)
+        }catch{
+            debugPrint("Could not save: \(error.localizedDescription)")
+            completion(false)
+        }
     }
     
     
@@ -139,18 +133,11 @@ extension AddMealViewController: UITextFieldDelegate {
         return false
     }
     
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        textField.endEditing(true)
-//        
-////        return true
-//    }
-//    
-    
     
 }
 
 
-extension AddMealViewController: UITableViewDelegate, UITableViewDataSource{
+extension AddMealViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -161,24 +148,46 @@ extension AddMealViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddMealCell") as? AddMealCell else {return UITableViewCell()}
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddNewMealCell", for: indexPath) as? AddNewMealCell else {return UITableViewCell()}
         
-//        cell.contentView.isUserInteractionEnabled = false
-        
+
         let member = familyMembers[indexPath.row]
         cell.configureCell(member: member)
-//        cell.likeBtn = {[unowned self] in
-////            let likeButtonImage = UIImage(named: "checkmark")
-////            self.setImage(likeButtonImage, for: .normal)
-//            print("shit")
-//        }
         
+        
+        cell.likeBtn = {[unowned self] in
+            
+            cell.dislikeButton.tintColor = UIColor.gray
+            cell.likeButton.tintColor = UIColor.green
+            member.dislike = false
+            member.like = true
+            self.save { finished in
+                if finished {
+                    print("finished")
+                    print(member)
+                }
+            }
+        }
+        
+        cell.dislikeBtn = {[unowned self] in
+            
+            cell.dislikeButton.tintColor = UIColor.red
+            cell.likeButton.tintColor = UIColor.gray
+            member.dislike = true
+            member.like = false
+            self.save { finished in
+                if finished {
+                    print("finished")
+                    print(member)
+                }
+            }
+        }
         
         return cell
     }
-    
-    
+
     
 }
+
 
